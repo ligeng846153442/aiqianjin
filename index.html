@@ -10,29 +10,29 @@
 	<body>
 		<div id="windowleft" class="windowleft">
 			<ul class="windowleft_t">
-				<li id="firstbox" class="firstbox movebox"><a href="#"><div class="showbox">收益计算器</div></a></li>
-				<li id="twobox" class="twobox movebox"><a href="#"><div class="showbox">问题咨询</div></a></li>
-				<li id="threebox" class="threebox movebox1 "><a href="#"><div style="width: 150px;height: 180px;"  class="showbox1">扫二维码下载APP<span></span></div></a></li>
+				<li id="firstbox" class="firstbox"><a href="#"><div class="showfirstbox">收益计算器</div></a></li>
+				<li id="twobox" class="twobox"><a href="#"><div class="showtwobox">问题咨询</div></a></li>
+				<li id="threebox" class="threebox"><a href="#"><div style="width: 150px;height: 180px;"  class="showthreebox">扫二维码下载APP<span></span></div></a></li>
 			</ul>
 			<ul class="windowleft_b">
-				<li class="movebox"><a href="#top"><div class="showbox">返回顶部</div></a></li>
+				<li class="fourbox"><a href="#top"class=""><div class="showfourbox">返回顶部</div></a></li>
 			</ul>
 		</div>
 		
 		<div class="header">
 			<div class="header_left l">
-				<a href="#">手机爱钱进</a>
+				<a href="#"><span></span>手机爱钱进</a>
 			</div>
 			<div class="header_right3 r">
-				<a href="#">登录</a>
-				<span>|</span>
 				<a href="#">注册</a>
+				<span>|</span>
+				<a href="#">登录</a>
 			</div>
 			<div class="header_right2 r">
-				<a href="#">在线客服</a>
+				<a href="#"><span></span>在线客服</a>
 			</div>
 			<div class="header_right1 r">
-				<p>400-812-8808(9:00-21:00)</p>
+				<p><span></span>400-812-8808(9:00-21:00)</p>
 			</div>
 		</div>
 		
@@ -54,8 +54,8 @@
 		
 		<div class="banner">
 		
-			<div id="sliderBox" style="height: 310px">
-			
+			<div id="sliderBox" style="height: 310px;cursor: pointer;">
+				<!--轮播图-->
 			</div>
 		
 			
@@ -200,7 +200,7 @@
 		
 		<div id="footer" class="footer">
 			<div id="footer_top" class="footer_up w">
-				<span class="l"><img src="img/footer_service.png"/></span>
+				<span class="span1 l"><img src="img/footer_service.png"/></span>
 				<div id="footertc" class="footertc l">
 					<ul>
 						<li class="l"><a href="#">数据披露</a></li>
@@ -229,6 +229,33 @@
 				</div>
 			</div>
 			<div id="footer_bottom" class="footer_bottom">
+				<div id="" class="footerb w">
+					<div id="" class="footerbl l">
+						<div id="" class="footerblt">
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							<a href="#" class="l"><span></span></a>
+							
+						</div>
+						<div id="" class="footerblb">
+							<p class="l" style="color: #707e8c;font-size: 12px;">©2018 iqianjin.com.All Rights Reserved</p>
+							<img src="img/ghs.png"/>
+							<a href="#" class="l">京公网安备 11010102001399号</a>
+							<a href="#" class="l" style="width: 117px;padding-left: 10px;">京ICP备14017729</a>
+							<a href="#" class="l" style="width: 117px">京ICP证150121号</a>
+							<a href="#" class="l" style="width: 180px">互联网金融协会违法违规行为投诉</a>
+						</div>
+					</div>
+					<div id="" class="footerbr r">
+						网贷有风险，出借需谨慎
+					</div>
+				</div>
 				
 			</div>
 		</div>
@@ -245,34 +272,68 @@
 					12,"#ccc","red",
 					true,-1,1500);
 					
-		/*
-		$("#downBox").animate({
-			top:30,
-			opacity:1
-		}, 800);
-		$("#downBox").animate({
-			top:20,
-		}, 100);
-		*/
-		
-//		$("#firstbox").mouseenter(
-//			function(){
-//				$("#firstlittlebox").css("position","absolute").animate({
-//					left:-140
-//			},1000)},
-////			function(){
-////				$("#firstlittlebox").css("position","absolute").animate({
-////					left:50
-////			},800)}
-//		);
+//		/*
+//		$("#downBox").animate({
+//			top:30,
+//			opacity:1
+//		}, 800);
+//		$("#downBox").animate({
+//			top:20,
+//		}, 100);
+//		*/
 //		
-//		$("#firstbox").mouseleave(
-//			function(){
-//				$("#firstlittlebox").css("position","absolute").animate({
-//					left:50
-//			},1000)},
-//			
-//		);
+		$(".firstbox").mouseenter(
+			function(){
+				$(".showfirstbox").css("position","absolute").animate({
+					left:-90
+			},500)}
+		);
+		$(".firstbox").mouseleave(
+			function(){
+				$(".showfirstbox").css("position","absolute").animate({
+					left:50
+			},500)},
+		);
+		
+		$(".twobox").mouseenter(
+			function(){
+				$(".showtwobox").css("position","absolute").animate({
+					left:-90
+			},500)}
+		);
+		$(".twobox").mouseleave(
+			function(){
+				$(".showtwobox").css("position","absolute").animate({
+					left:50
+			},500)},
+		);
+		
+		$(".threebox").mouseenter(
+			function(){
+				$(".showthreebox").css("position","absolute").animate({
+					left:-150
+			},500)}
+		);
+		$(".threebox").mouseleave(
+			function(){
+				$(".showthreebox").css("position","absolute").animate({
+					left:50
+			},500)},
+		);
+		
+		$(".fourbox").mouseenter(
+			function(){
+				$(".showfourbox").css("position","absolute").animate({
+					left:-90
+			},500)}
+		);
+		$(".fourbox").mouseleave(
+			function(){
+				$(".showfourbox").css("position","absolute").animate({
+					left:50
+			},500)},
+		);
+		
 	};
 	
 </script>

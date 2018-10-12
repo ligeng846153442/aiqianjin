@@ -2,6 +2,7 @@
 .header{
 	width:100%;
 	height: 28px;
+	
 	background: #363b3f;
 }
 .header .header_left{
@@ -12,29 +13,75 @@
 	top: 5px;
 }
 .header .header_left a{
-	color:blue;
+	display: block;
+	width: 85px;
+	height: 28px;
+	/*padding-bottom: 3px;*/
+	color:#74859c;
+}
+.header .header_left a span{
+	display: block;
+	width: 10px;
+	height: 16px;
+	float: left;
+	padding-top: 3px;
+	padding-left: 5px;
+	background: url(../img/sp1.png) no-repeat -376px -348px;
 }
 .header .header_left a:hover{
 	color:#f60;
 }
+.header .header_left a:hover span{
+	background: url(../img/sp1.png) no-repeat -396px -348px;
+}
 .header .header_right1{
-	color:blue;
+	color:#74859c;
 	margin-right: 19px;
 	margin-top: 5px;
 }
+.header .header_right1 p{
+	display: block;
+	
+	width: 193px;
+	height: 28px;
+}
+.header .header_right1 p span{
+	width: 14px;
+	float: left;
+	height: 16px;
+	padding-right: 3px;
+	background: url(../img/sp1.png) no-repeat -76px -349px;
+}
 .header .header_right1:hover{
 	color: #f60;
+}
+.header .header_right1:hover span{
+	background: url(../img/sp1.png) no-repeat -52px -349px;
 }
 .header .header_right2{
 	margin-top: 5px;
 }
 
 .header .header_right2 a{
-	color:blue;
+	color:#74859c;
+	display: block;
+	width: 74px;
+	height: 28px;
 	margin-right: 19px;
+}
+.header .header_right2 a span{
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 3px;
+	padding-right: 2px;
+	background: url(../img/sp1.png) no-repeat -350px -348px;
 }
 .header .header_right2 a:hover{
 	color: #f60;
+}
+.header .header_right2 a:hover span{
+	background: url(../img/sp1.png) no-repeat -324px -348px;
 }
 .header .header_right3{
 	margin-right: 40px;
@@ -306,7 +353,7 @@ body{
 	left: 150px;
 }
 
-.windowleft .movebox:hover .showbox{
+/*.windowleft .movebox:hover .showbox{
 	left:-90px;
 	transition: all .5s linear 0s ; 
 }
@@ -322,7 +369,7 @@ body{
 .windowleft .movebox1 .showbox1{
 	left:150px;
 	transition: all .5s linear 0s ;
-}
+}*/
 
 .windowleft .windowleft_t .threebox div span{
 	display: block;
@@ -612,7 +659,7 @@ body{
 	height: 194px;
 	overflow: hidden;
 }
-.footer .w span{
+.footer .w .span1{
 	display: block;
 	width: 278px;
 	height: 143px;
@@ -664,4 +711,153 @@ body{
 /*.footer .w .footertr dl:nth-child(2) dt{*/
 .footer .w .footertr dl dd{
 	text-align: center;
+}
+.footer .footer_bottom{
+	width: 100%;
+	height: 78px;
+	background: #404549;
+}
+.footer .footer_bottom .footerb.w{
+	height: 78px;
+}
+.footer .footer_bottom .footerb.w .footerbl{
+	width: 898px;
+	height: 78px;
+
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt{
+	width: 898px;
+	height: 30px;
+	padding-top: 14px;
+
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(1) span{
+	display: block;
+	width: 67px;
+	height: 24px;
+	background: url(../img/sp1.png) no-repeat -340px -194px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(1):hover span{
+	background: url(../img/sp1.png) no-repeat -417px -194px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(2) span{
+	display: block;
+	width: 67px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1.png) no-repeat -265px -194px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(2):hover span{
+	background: url(../img/sp1.png) no-repeat -417px -194px;
+	
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(3) span{
+	display: block;
+	width: 76px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1.png) no-repeat -86px -228px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(3):hover span{
+	background: url(../img/sp1.png) no-repeat 0px -228px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(4) span{
+	display: block;
+	width: 86px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1-new.png) no-repeat -416px 0px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(4):hover span{
+	background: url(../img/sp1-new.png) no-repeat -416px -34px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(5) span{
+	display: block;
+	width: 64px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1-new.png) no-repeat -416px -102px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(5):hover span{
+	background: url(../img/sp1-new.png) no-repeat -416px -137px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(6) span{
+	display: block;
+	width: 109px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1-new.png) no-repeat 0px -395px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(6):hover span{
+	background: url(../img/sp1-new.png) no-repeat -119px -395px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(7) span{
+	display: block;
+	width: 152px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1-new.png) no-repeat -238px -395px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(7):hover span{
+	background: url(../img/sp1-new.png) no-repeat 0px -429px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(8) span{
+	display: block;
+	width: 120px;
+	height: 24px;
+	margin-left: 3px;
+	background: url(../img/sp1-new.png) no-repeat -351px -429px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(8):hover span{
+	background: url(../img/sp1-new.png) no-repeat -221px -429px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(9) span{
+	display: block;
+	width: 106px;
+	height: 24px;
+	margin-left: 5px;
+	background: url(../img/sp1-new.png) no-repeat -351px -429px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblt a:nth-child(9):hover span{
+	background: url(../img/sp1-new.png) no-repeat -221px -429px;
+}
+
+.footer .footer_bottom .footerb.w .footerbl .footerblb{
+	width: 898px;
+	height: 35px;
+	line-height: 35px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblb img{
+	width: 20px;
+	height: 20px;
+	padding-top: 10px;
+	padding-left: 10px;
+	float: left;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblb a{
+	display: block;
+	width: 180px;
+	height: 16px;
+	color: #707e8c;
+	font-size: 12px;
+}
+.footer .footer_bottom .footerb.w .footerbl .footerblb a:hover{
+	color: #fff;
+}
+.footer .footer_bottom .footerb.w .footerbr{
+	width: 226px;
+	height: 76px;
+	text-align: center;
+	line-height: 76px;
+	color: #707e8c;
+	font-size: 16px;
 }
