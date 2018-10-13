@@ -5,6 +5,8 @@
 		<title></title>
 		<link rel="stylesheet" href="css/base.css" type="text/css">
 		<link rel="stylesheet" href="css/reg.css" type="text/css">
+		<link rel="stylesheet" href="css/reglogin.css" type="text/css">
+		
 	</head>
 	<body>
 		<div id="" class="header">
@@ -45,24 +47,28 @@
 					</div>
 					
 					<div id="" class="main1rc1">
-						<input type="" name="" id="" placeholder="请输入您的常用手机号码" />
+						<input class="inputphone l" name="" id="phoneId" placeholder="请输入您的常用手机号码" />
 						<span id="" class="span1"></span>
+						<span id="" class="spanphone">请输入您的常用手机号码</span>
+						<span id="spannull" class="spannull">手机号码格式不正确，请重新输入!!!!</span>
+						<span id="spancall" class="spancall">手机号码格式不正确，请重新输入!!!!</span>
 					</div>
 					<div id="" class="main1rc2">
-						<input type="" name="" id="" placeholder="请输入密码" />
+						<input class="inputpassword l" type="" name="" id="passId" placeholder="请输入密码" />
 						<span id="" class="span2"></span>
+						<span id="" class="spanpassword l">请输入6-20位字符，建议用字母、数字或符号的组合</span>
 					</div>
 					<div id="" class="main1rc3">
-						<input type="" name="" id="" placeholder="请输入密码" class="l"/>
+						<input type="" name="" id="" placeholder="请输入验证码" class="l"/>
 						<span id="" class="span3 l"><a href="#" style="color: #fff;">获取短信验证码</a></span>
 					</div>
 					<div id="" class="main1rc4">
-						
-						<div id="" class="">
-							<span></span>
-							<p>我有邀请码，<span style="color: #f60;">添加邀请码</span>帮助好友赚取利益</p>
-						</div>
-						
+						<span class="clickspan"></span>
+						<p class="yaoqingma" style="">我有邀请码，<span style="color: #f60;">添加邀请码</span>帮助好友赚取利益</p>
+
+					</div>
+					<div id="" class="main1rc4-1">
+						<input type="" name="" id="" class="yaoqingkuang" placeholder="请输入邀请码" />
 					</div>
 					<span id="" class="main1rc5">
 						<input type="checkbox" name="" id="" value="" />我已阅读并同意<a href="#">《爱钱进注册协议》</a>、<a href="#">《CFCA数字证书服务协议》</a>
@@ -82,8 +88,74 @@
 		
 		<div id="" class="footer">
 			<div id="" class="footer1 w">
-				<p style="color: #707e8c;">©2018 iqianjin.com.All Rights Reserved 京ICP备14017729  出借有风险，出借需谨慎</p>
+				<p style="color: #707e8c;">©2018 iqianjin.com.All Rights Reserved <a href="#">京ICP备14017729  出借有风险，出借需谨慎</a></p>
 			</div>
 		</div>
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		
+
+				
+		
+		/*----文本框聚焦显示提示----*/
+		$(".inputphone").focus(function(){
+			$(".spanphone").css("display","block");
+		});
+		$(".inputphone").blur(function(){
+			$(".spanphone").css("display","none");
+		});
+		$(".inputpassword").focus(function(){
+			$(".spanpassword").css("display","block");
+		});
+		$(".inputpassword").blur(function(){
+			$(".spanpassword").css("display","none");
+		});
+		
+//		document.getElementsByClassName("inputphone").onclick = function(){
+//			document.getElementsByClassName("spanphone").css.style.display = "block";
+//		};
+//		document.getElementsByClassName("inputphone").onblur = function(){
+//			document.getElementsByClassName("spanphone").css.style.display = "none";
+//		};
+		
+		
+		/*----正则验证手机号和密码----*/
+		
+		
+		
+		
+		
+		/*----点击三角和文本显示和隐藏文本框----*/
+		$(".main1rc4").click(function(){
+			if($(".main1rc4-1").css("height")=="0px"){
+				$(".main1rc4-1").animate({
+						height:60
+				},800);
+				$(".yaoqingkuang").animate({
+						height:40
+				},800);
+				
+				$(".clickspan").css({"border-right":"5px solid #fff","border-top":"5px solid #000","border-left":"5px solid #fff"});
+				
+			}else if($(".main1rc4-1").css("height")!="0px"){
+				$(".main1rc4-1").animate({
+						height:0
+				},800);
+				$(".yaoqingkuang").animate({
+						height:0
+				},800);
+				
+				$(".clickspan").css({"border-bottom":"5px solid #fff","border-top":"5px solid #fff","border-left":"5px solid #000"});
+				
+			}	
+		});
+				
+//			function(){
+//				$(".span1").css({"border-right":"5px solid #fff","border-top":"5px solid #000","border-left":"5px solid #fff"});
+//				
+//			}
+	}
+</script>

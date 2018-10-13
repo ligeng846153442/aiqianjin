@@ -1,0 +1,139 @@
+body{
+	background: #ebeef3;
+}
+/*----main----*/
+.main.w{
+	/*width: 100%;*/
+	height: 424px;
+	background: #fff;
+	margin-top: 20px ;
+	margin-bottom: 20px;
+}
+.main.w .mian1r{
+	width: 1050px;
+	height: 424px;
+}
+.main.w .mian1r .main1rt{
+	width: 168px;
+	height: 27px;
+	font-size: 18px;
+	margin-right: 20px;
+	margin-top: 20px;
+	
+}
+.main.w .mian1r .main1rc1{
+	width: 1050px;
+	height: 70px;
+	background: ;
+	position: relative;
+}
+.main.w .mian1r .main1rc1 input{
+	/*display: block;*/
+	width: 380px;
+	height: 40px;
+	background: #f3f5fa;
+	text-indent: 3em;
+	border: 1px solid #faf5fa;
+	margin-right: 15px;
+	/*text-align: left;*/
+}
+.main.w .mian1r .main1rc1 input:focus{
+	outline: 2px solid #90c1f5;
+}
+.main.w .mian1r .main1rc1 .span1{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 16px;
+	height: 23px;
+	padding-right: 10px;
+	border-right: 1px solid #ccc;
+	background: url(../img/sp1.png) no-repeat -207px -69px;
+}
+
+.main.w .mian1r .main1rc2{
+	width: 1050px;
+	height: 70px;
+	background: ;
+	position: relative;
+}
+.main.w .mian1r .main1rc2 input{
+	/*display: block;*/
+	width: 380px;
+	height: 40px;
+	background: #f3f5fa;
+	text-indent: 3em;
+	border: none;
+	margin-right: 15px;
+	/*text-align: left;*/
+}
+.main.w .mian1r .main1rc2 input:focus{
+	outline: 2px solid #90c1f5;
+}
+.main.w .mian1r .main1rc2 .span2{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 16px;
+	height: 23px;
+	padding-right: 10px;
+	border-right: 1px solid #ccc;
+	background: url(../img/sp1.png) no-repeat -207px -69px;
+}
+
+.main.w .mian1r .main1rc3{
+	width: 1050px;
+	height: 70px;
+	background: ;
+	position: relative;
+}
+.main.w .mian1r .main1rc3 input{
+	/*display: block;*/
+	width: 142px;
+	height: 40px;
+	background: #f3f5fa;
+	text-indent: 1em;
+	border: none;
+	margin-right: 15px;
+	/*text-align: left;*/
+}
+.main.w .mian1r .main1rc3 input:focus{
+	outline: 2px solid #90c1f5;
+}
+.main.w .mian1r .main1rc3 span{
+	display: block;
+	width: 98px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*background: #19bd9b;*/
+	color: #ababab;
+	border-radius: 3px;
+}
+.main.w .mian1r .main1rc5{
+	display: block;
+	width: 383px;
+	height: 19px;
+}
+.main.w .mian1r .main1rc6{
+	width: 380px;
+	height: 38px;
+	background: #f60;
+	text-align: center;
+	line-height: 38px;
+	border-radius: 3px;
+	margin-top: 20px;
+}
+.main.w .mian1r .main1rc7{
+	width:1050px ;
+	height: 21px;
+	margin-top: 15px;
+	position: relative;
+}
+.main.w .mian1r .main1rc7 span{
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 17px;
+	background: url(../img/sp1.png) no-repeat -25px -321px;
+}
