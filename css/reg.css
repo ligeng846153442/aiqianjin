@@ -52,16 +52,16 @@
 	left: 402px;
 	top: 0px;
 }
-.main .w .mian1r .main1rc1 .spancall{
+/*.main .w .mian1r .main1rc1 .spancall{
 	width: 250px;
 	height: 40px;
 	line-height: 40px;
 	color: #f60;
-	/*display: none;*/
+	display: none;
 	position: absolute;
 	left: 402px;
 	top: 0px;
-}
+}*/
 
 .main .w .mian1r .main1rc1 .span1{
 	position: absolute;
@@ -93,13 +93,13 @@
 .main .w .mian1r .main1rc2 input:focus{
 	outline: 2px solid #90c1f5;
 }
-.main .w .mian1r .main1rc2 .spanpassword{
+/*.main .w .mian1r .main1rc2 .spanpassword{
 	width: 330px;
 	height: 40px;
 	line-height: 40px;
 	color: #aaa;
 	display: none;
-}
+}*/
 .main .w .mian1r .main1rc2 .span2{
 	position: absolute;
 	left: 10px;

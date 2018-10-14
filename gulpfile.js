@@ -6,6 +6,8 @@ gulp.task("copyhtml",function(){
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
 	gulp.src("reg.html")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
+	gulp.src("login.html")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
 });
 //复制img文件
 gulp.task("copyimg",function(){

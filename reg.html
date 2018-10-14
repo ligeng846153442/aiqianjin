@@ -47,16 +47,21 @@
 					</div>
 					
 					<div id="" class="main1rc1">
-						<input class="inputphone l" name="" id="phoneId" placeholder="请输入您的常用手机号码" />
+						<input class="inputphone l" type="text" name="" id="phoneId" placeholder="请输入您的常用手机号码" />
 						<span id="" class="span1"></span>
-						<span id="" class="spanphone">请输入您的常用手机号码</span>
-						<span id="spannull" class="spannull">手机号码格式不正确，请重新输入!!!!</span>
-						<span id="spancall" class="spancall">手机号码格式不正确，请重新输入!!!!</span>
+						<span id="spanphone" class="" style="width: 240px;height: 40px;line-height: 40px;color: #f60;position: absolute;left: 402px;top: 0px;"></span>
 					</div>
 					<div id="" class="main1rc2">
-						<input class="inputpassword l" type="" name="" id="passId" placeholder="请输入密码" />
+						<input class="inputpassword l" type="password" name="" id="passId" placeholder="请输入密码" />
 						<span id="" class="span2"></span>
-						<span id="" class="spanpassword l">请输入6-20位字符，建议用字母、数字或符号的组合</span>
+						<span id="spanpass" class="" style="width: 340px;height: 40px;line-height: 40px;position: absolute;left:402px;top: 0px;"></span>
+						<div id="mimastrong" style="opacity:0;position: absolute; width:300px;height: 40px;line-height: 40px;right: 10px;top: 0px;">
+							密码强度<span id="weak" style="position:absolute;left:70px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
+									<span id="normal" style="position:absolute;left:110px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
+									<span id="strong" style="position:absolute;left:150px;top:13px;border-radius:4px;width: 40px;height: 15px;;margin-left: 5px;"></span>
+									<span id="tishi" style="position:absolute;left:200px;top:13px;border-radius:4px;width: 15px;height: 15px;margin-left: 5px;"></sapn>
+						</div>
+						
 					</div>
 					<div id="" class="main1rc3">
 						<input type="" name="" id="" placeholder="请输入验证码" class="l"/>
@@ -94,25 +99,139 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/regExpTools.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
 		
-
+		
 				
 		
-		/*----文本框聚焦显示提示----*/
-		$(".inputphone").focus(function(){
-			$(".spanphone").css("display","block");
-		});
-		$(".inputphone").blur(function(){
-			$(".spanphone").css("display","none");
-		});
-		$(".inputpassword").focus(function(){
-			$(".spanpassword").css("display","block");
-		});
-		$(".inputpassword").blur(function(){
-			$(".spanpassword").css("display","none");
-		});
+		/*----手机号文本框聚焦显示提示----*/
+		document.getElementById("phoneId").onfocus = function(){
+			document.getElementById("spanphone").style.color = "#aaa";
+			document.getElementById("spanphone").innerHTML = "请输入您的手机号";
+		}
+		/*----手机号文本框失焦显示提示----*/
+		document.getElementById("phoneId").onblur = function(){
+			if(this.value==""){
+				document.getElementById("spanphone").style.color = "#f60";
+				document.getElementById("spanphone").innerHTML = "手机号不能为空";
+			}else if(this.value!=null){
+				var str = this.value;
+				var tel = checkAll("Phone",str);
+				if(tel==true){
+					document.getElementById("spanphone").style.color = "#19bd9b";
+					document.getElementById("spanphone").style.fontSize = "20px";
+					document.getElementById("spanphone").innerHTML = "√";
+				}else{
+					document.getElementById("spanphone").style.color = "#f60";
+					document.getElementById("spanphone").innerHTML = "手机号码格式不正确，请重新输入！！";
+				}
+			}
+		}
+		
+		
+		/*----密码强度+密码提示----*/
+		/*----聚焦----*/
+		document.getElementById("passId").onfocus = function(){
+			let str1 = this.value; 
+			if(str1.length>0){
+				document.getElementById("mimastrong").style.opacity = "0";
+			}
+			
+			document.getElementById("spanpass").style.fontSize = "14px";
+			document.getElementById("spanpass").style.color = "#aaa";
+			document.getElementById("spanpass").innerHTML = "请输入6-20位字符，建议使用字母，数字或符号的组合";
+
+				document.getElementById("passId").onkeyup = function(){
+					document.getElementById("mimastrong").style.opacity = "1";
+					
+					var pass = this.value;
+					if(pass.length >= 6 || pass.length <= 20){
+						
+						//1、分别查看字符串里是否有，数字，字母，特殊字符
+						//1）、数字
+						var hasNum = false;
+						var regNum = /\d/;
+						if(regNum.test(pass)){
+							hasNum = true;
+						}
+						//2）、字母
+						var hasLetter = false;
+						var regLetter = /[a-zA-Z]/;
+						if(regLetter.test(pass)){
+							hasLetter = true;
+						}
+						//3）、特殊字符
+						var hasSpecial = false;
+						var regSpecial = /[@!#\$%]/;
+						if(regSpecial.test(pass)){
+							hasSpecial = true;
+						}
+					
+						let level = hasNum+hasLetter+hasSpecial;
+						if(level==1){//弱：纯数字，纯字母，纯特殊字
+							document.getElementById("weak").style.backgroundColor = "#f60";
+							document.getElementById("normal").style.backgroundColor = "#ccc";
+							document.getElementById("strong").style.backgroundColor = "#ccc";
+							document.getElementById("tishi").innerHTML = "弱";
+						}else if(level==2){//中：两个的组合
+							document.getElementById("normal").style.backgroundColor = "#19BD9B";
+							document.getElementById("weak").style.backgroundColor = "#19BD9B";
+							document.getElementById("strong").style.backgroundColor = "#ccc";
+							document.getElementById("tishi").innerHTML = "中";
+						}else if(level==3){//强：三个组合
+							document.getElementById("strong").style.backgroundColor = "#19BD9B";
+							document.getElementById("weak").style.backgroundColor = "#19BD9B";
+							document.getElementById("normal").style.backgroundColor = "#19BD9B";
+							document.getElementById("tishi").innerHTML = "强";
+						}
+					}else if(regLetter.test(str) || regNum.test(str) || regSpecial.test(str)){
+						document.getElementById("spanpass").style.color = "#19bd9b";
+						document.getElementById("spanpass").style.fontSize = "20px";
+						document.getElementById("spanpass").innerHTML = "√";
+					}
+				}
+		}	
+		/*----失焦----*/
+		document.getElementById("passId").onblur = function(){
+			document.getElementById("mimastrong").style.opacity = "0";
+			if(this.value==""){
+				document.getElementById("spanpass").style.color = "#f60";
+				document.getElementById("spanpass").innerHTML = "密码不能为空";
+				document.getElementById("spanpass").style.fontSize = "14px";
+				
+			}else if(this.value!=null){
+				var regLetter = /[a-zA-Z]/;
+				var regNum = /[0-9]/;
+				var regSpecial = /[\!#@_]/;
+				var str = this.value;
+				if(str.length < 6 || str.length > 20){
+					document.getElementById("spanpass").style.color = "#f60";
+					document.getElementById("spanpass").innerHTML = "密码长度只能在6-20位字符之间！！";
+				}else if(regLetter.test(str) || regNum.test(str) || regSpecial.test(str)){
+					document.getElementById("spanpass").style.color = "#19bd9b";
+					document.getElementById("spanpass").style.fontSize = "20px";
+					document.getElementById("spanpass").innerHTML = "√";
+
+				}
+			}
+		}
+		
+		
+		
+//		$(".inputphone").focus(function(){
+//			$(".spanphone").css("display","block");
+//		});
+//		$(".inputphone").blur(function(){
+//			$(".spanphone").css("display","none");
+//		});
+//		$(".inputpassword").focus(function(){
+//			$(".spanpassword").css("display","block");
+//		});
+//		$(".inputpassword").blur(function(){
+//			$(".spanpassword").css("display","none");
+//		});
 		
 //		document.getElementsByClassName("inputphone").onclick = function(){
 //			document.getElementsByClassName("spanphone").css.style.display = "block";
@@ -121,8 +240,6 @@
 //			document.getElementsByClassName("spanphone").css.style.display = "none";
 //		};
 		
-		
-		/*----正则验证手机号和密码----*/
 		
 		
 		
