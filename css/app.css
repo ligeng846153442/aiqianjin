@@ -1,0 +1,93 @@
+.w{width: 1080px;margin: 0 auto;}
+/*----header----*/
+.header{
+	width: 100%;
+	height: 111px;
+}
+.header .w{
+	height: 111px;
+	position: relative;
+}
+.header .w a:nth-child(1){
+	display: block;
+	width: 300px;
+	height: 45px;
+	left: 0px;
+	top: 50px;
+	position: absolute;
+	background: url(../img/sp1.png) no-repeat -234px 0px;
+}
+.header .w a:nth-child(2){
+	margin-top: 50px;
+	font-size: 20px;
+	color: #f60;
+}
+/*----banner----*/
+.banner{
+	width: 100%;
+	height: 563px;
+	background: url(../img/bg.png) 50% 50% no-repeat;
+	position: relative;
+}
+.banner .banner1.w{
+	height: 669px;
+	position: relative;
+}
+.banner .banner1.w .iphone{
+	display: inline-block;
+    width: 155px;
+    height: 50px;
+    position: absolute;
+    left: 475px;
+    bottom: 320px;
+    background: #fff;
+    opacity: 0;
+}
+.banner .banner1.w .android{
+	display: inline-block;
+    width: 155px;
+    height: 50px;
+    position: absolute;
+    left: 475px;
+    bottom: 249px;
+    background: #fff;
+    opacity: 0;
+}
+.banner .banner1.w .erweima{
+	position: absolute;
+	left: 655px;
+    bottom: 229px;
+	width: 162px;
+	height: 160px;
+	background: url(../img/default.png) no-repeat;
+	
+}
+.market{
+	width: 100%;
+	margin-bottom: 70px;
+}
+.market .market1.w{
+	background: #fff;
+}
+.market .market1.w .market_bottom{
+	width: 470px;
+	height: 359px;
+	margin: 0 auto;
+}
+/*----footer----*/
+.footer{
+	width: 100%;
+	height: 40px;
+	background: #333;
+}
+.footer .w{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.footer .w a{
+	color: #707e8c;
+}
+.footer .w a:hover{
+	color: #fff;
+}

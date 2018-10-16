@@ -45,42 +45,45 @@
 							已有账号？<a href="#" style="color: #f60;">立即登录</a>
 						</div>
 					</div>
-					
-					<div id="" class="main1rc1">
-						<input class="inputphone l" type="text" name="" id="phoneId" placeholder="请输入您的常用手机号码" />
-						<span id="" class="span1"></span>
-						<span id="spanphone" class="" style="width: 240px;height: 40px;line-height: 40px;color: #f60;position: absolute;left: 402px;top: 0px;"></span>
-					</div>
-					<div id="" class="main1rc2">
-						<input class="inputpassword l" type="password" name="" id="passId" placeholder="请输入密码" />
-						<span id="" class="span2"></span>
-						<span id="spanpass" class="" style="width: 340px;height: 40px;line-height: 40px;position: absolute;left:402px;top: 0px;"></span>
-						<div id="mimastrong" style="opacity:0;position: absolute; width:300px;height: 40px;line-height: 40px;right: 10px;top: 0px;">
-							密码强度<span id="weak" style="position:absolute;left:70px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
-									<span id="normal" style="position:absolute;left:110px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
-									<span id="strong" style="position:absolute;left:150px;top:13px;border-radius:4px;width: 40px;height: 15px;;margin-left: 5px;"></span>
-									<span id="tishi" style="position:absolute;left:200px;top:13px;border-radius:4px;width: 15px;height: 15px;margin-left: 5px;"></sapn>
+					<form action="" method="post">
+						<div id="" class="main1rc1">
+							<input class="inputphone l" type="text" name="" id="phoneId" placeholder="请输入您的常用手机号码" />
+							<span id="" class="span1"></span>
+							<span id="spanphone" class="" style="width: 240px;height: 40px;line-height: 40px;color: #f60;position: absolute;left: 402px;top: 0px;"></span>
 						</div>
+						<div id="" class="main1rc2">
+							<input class="inputpassword l" type="password" name="" id="passId" placeholder="请输入密码" />
+							<span id="" class="span2"></span>
+							<span id="spanpass" class="" style="width: 340px;height: 40px;line-height: 40px;position: absolute;left:402px;top: 0px;"></span>
+							<div id="mimastrong" style="opacity:0;position: absolute; width:300px;height: 40px;line-height: 40px;right: 10px;top: 0px;">
+								密码强度<span id="weak" style="position:absolute;left:70px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
+										<span id="normal" style="position:absolute;left:110px;top:13px;border-radius:4px;width: 40px;height: 15px;margin-left: 5px;"></span>
+										<span id="strong" style="position:absolute;left:150px;top:13px;border-radius:4px;width: 40px;height: 15px;;margin-left: 5px;"></span>
+										<span id="tishi" style="position:absolute;left:200px;top:13px;border-radius:4px;width: 15px;height: 15px;margin-left: 5px;"></sapn>
+							</div>
+							
+						</div>
+						<div id="" class="main1rc3">
+							<input type="" name="" id="" placeholder="请输入验证码" class="l"/>
+							<span id="" class="span3 l"><a href="#" style="color: #fff;">获取短信验证码</a></span>
+						</div>
+						<div id="" class="main1rc4">
+							<span class="clickspan"></span>
+							<p class="yaoqingma" style="">我有邀请码，<span style="color: #f60;">添加邀请码</span>帮助好友赚取利益</p>
+	
+						</div>
+						<div id="" class="main1rc4-1">
+							<input type="text" name="" id="" class="yaoqingkuang" placeholder="请输入邀请码" />
+						</div>
+						<span id="" class="main1rc5">
+							<input type="checkbox" name="" id="" value="" />我已阅读并同意<a href="#">《爱钱进注册协议》</a>、<a href="#">《CFCA数字证书服务协议》</a>
+						</span>
 						
-					</div>
-					<div id="" class="main1rc3">
-						<input type="" name="" id="" placeholder="请输入验证码" class="l"/>
-						<span id="" class="span3 l"><a href="#" style="color: #fff;">获取短信验证码</a></span>
-					</div>
-					<div id="" class="main1rc4">
-						<span class="clickspan"></span>
-						<p class="yaoqingma" style="">我有邀请码，<span style="color: #f60;">添加邀请码</span>帮助好友赚取利益</p>
-
-					</div>
-					<div id="" class="main1rc4-1">
-						<input type="" name="" id="" class="yaoqingkuang" placeholder="请输入邀请码" />
-					</div>
-					<span id="" class="main1rc5">
-						<input type="checkbox" name="" id="" value="" />我已阅读并同意<a href="#">《爱钱进注册协议》</a>、<a href="#">《CFCA数字证书服务协议》</a>
-					</span>
-					<div id="" class="main1rc6">
-						<a href="#" style="display: block;width: 380px;height: 38px;color: #fff;">立即注册</a>
-					</div>
+						<input type="submit" value="立即注册"/ class="main1rc6">
+						
+						
+					</form>
+					
 					<div id="" class="main1rc7">
 						<span id="" class="">
 							
@@ -113,7 +116,10 @@
 		}
 		/*----手机号文本框失焦显示提示----*/
 		document.getElementById("phoneId").onblur = function(){
+			document.getElementById("passId").style.outline = "1px solid #f60";
+			
 			if(this.value==""){
+				document.getElementById("passId").style.outline = "none";
 				document.getElementById("spanphone").style.color = "#f60";
 				document.getElementById("spanphone").innerHTML = "手机号不能为空";
 			}else if(this.value!=null){
@@ -134,7 +140,9 @@
 		/*----密码强度+密码提示----*/
 		/*----聚焦----*/
 		document.getElementById("passId").onfocus = function(){
-			let str1 = this.value; 
+			document.getElementById("passId").style.outline = "1px solid #90c1f5";
+			let str1 = this.value;
+			
 			if(str1.length>0){
 				document.getElementById("mimastrong").style.opacity = "0";
 			}
@@ -200,6 +208,7 @@
 				document.getElementById("spanpass").style.color = "#f60";
 				document.getElementById("spanpass").innerHTML = "密码不能为空";
 				document.getElementById("spanpass").style.fontSize = "14px";
+				document.getElementById("passId").style.outline = "1px solid #f60";
 				
 			}else if(this.value!=null){
 				var regLetter = /[a-zA-Z]/;

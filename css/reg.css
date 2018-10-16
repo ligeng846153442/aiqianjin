@@ -127,10 +127,10 @@
 	margin-right: 15px;
 	/*text-align: left;*/
 }
-.main .w .mian1r .main1rc3 input:focus{
+.main .w .mian1r .main1rc3 input:nth-child(1):focus{
 	outline: 2px solid #90c1f5;
 }
-.main .w .mian1r .main1rc3 span{
+.main .w .mian1r .main1rc3 .span3{
 	display: block;
 	width: 198px;
 	height: 40px;
@@ -139,6 +139,7 @@
 	background: #19bd9b;
 	color: #fff;
 	border-radius: 3px;
+	outline: none;
 }
 
 .main .w .mian1r .main1rc4{
@@ -189,6 +190,8 @@
 	text-align: center;
 	line-height: 38px;
 	border-radius: 3px;
+	color: #fff;
+	border: none;
 }
 .main .w .mian1r .main1rc7{
 	width:1050px ;

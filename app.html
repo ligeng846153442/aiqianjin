@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/base.css" type="text/css">
+	<link rel="stylesheet" href="css/app.css" type="text/css">
+	<body>
+		<div id="" class="header">
+			<div id="" class="header1 w">
+				<a href="index.html"></a>
+				<a href="#" class="r">手机版</a>
+			</div>
+		</div>
+		
+		<div id="" class="banner">
+			<div id="" class="banner1 w">
+				<img src="img/banner-brief.png"/ style="padding-top: 20px;">
+				<a href="#" class="iphone"></a>
+				<a href="#" class="android"></a>
+				<div id="" class="erweima"></div>
+				<div id="sliderBox" style="width: 274px;height: 600px;position: absolute;left: 17px;top: -565px;cursor: pointer;">
+					<!--轮播图-->
+				</div>
+			</div>
+		</div>
+		
+		<div id="" class="market">
+			<div id="" class="market1 w">
+				<img src="img/top.png"/ style="margin-top: 60px;">
+				<img src="img/center.png" style="margin-top: 60px;">
+				<img src="img/only.png" style="margin: 60px auto;">
+				<div id="" class="market_bottom">
+					<a href="#" class="l"><img src="img/iphone.png"/></a>
+					<a href="#" class="r"><img src="img/android.png"/></a>
+					<img src="img/QRcode.png"/ style="padding-top: 55px;margin-left: 125px;">
+				</div>
+			</div>
+		</div>
+		
+		<div id="" class="footer">
+			<div id="" class="footer">
+				<div id="" class="footer1 w">
+					<p style="color: #707e8c;">©2018 iqianjin.com.All Rights Reserved <a href="#">京ICP备14017729  出借有风险，出借需谨慎</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/slider1.js"></script>
+<script type="text/javascript" src="js/mover180506.js"></script>
+<script type="text/javascript" src="js/getStyle.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		let s1 = new Slider($("#sliderBox"),'','',["img/focus-01.png","img/focus-02.png","img/focus-03.png"],
+					12,"#ccc","red",
+					true,-1,1500);
+	}
+</script>
