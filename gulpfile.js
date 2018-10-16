@@ -1,5 +1,5 @@
 var gulp = require("gulp");//本地安装gulp所用到地方
-
+var sass = require("gulp-sass");
 //复制HTML文件
 gulp.task("copyhtml",function(){
 	gulp.src("index.html")
@@ -11,6 +11,8 @@ gulp.task("copyhtml",function(){
 	gulp.src("app.html")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
 	gulp.src("shopping.html")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
+	gulp.src("moneyshop.html")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1"));
 });
 //复制img文件
@@ -28,12 +30,24 @@ gulp.task("copyjs",function(){
 	gulp.src("js/**/*")
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1\\js"));
 });
-
-gulp.task("bulid",["copyhtml","copycss","copyjs","copyimg",]);
+//复制sass文件
+gulp.task("copysass",function(){
+	gulp.src("sass/**/*")
+	.pipe(sass())
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1\\css"));
+});
+//复制js文件
+gulp.task("copyphp",function(){
+	gulp.src("php/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\aiqianjin1\\php"));
+});
+gulp.task("build",["copyhtml","copycss","copyjs","copyimg","copysass","copyphp"]);
 
 gulp.task("watchall",function(){
 	gulp.watch("*.html",["copyhtml"]);
 	gulp.watch("img/**/*",["copyimg"]);
 	gulp.watch("css/**/*",["copycss"]);
 	gulp.watch("js/**/*",["copyjs"]);
+	gulp.watch("sass/**/*",["copysass"]);
+	gulp.watch("php/**/*",["copyphp"]);
 });
